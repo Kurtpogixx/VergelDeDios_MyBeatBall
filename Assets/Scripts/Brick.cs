@@ -28,7 +28,7 @@ public class Brick : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         hits--;
-        //Score points
+        GameManager.Instance.Score += points;
         if (hits <= 0) {
             //Destroy() is a predefined variable that you can access to this game object to destroy the object
             Destroy(gameObject);
